@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 工具資安互動指南 (小白專用)</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 25px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #007bff;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1em;
+            color: #6c757d;
+        }
+        .tool-category {
+            margin-bottom: 25px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        summary {
+            font-size: 1.3em;
+            font-weight: 600;
+            padding: 15px 20px;
+            background-color: #f1f3f5;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+        summary:hover {
+            background-color: #e9ecef;
+        }
+        details[open] > summary {
+            background-color: #007bff;
+            color: white;
+        }
+        .details-content {
+            padding: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+        h3 {
+            color: #17a2b8;
+            border-left: 4px solid #17a2b8;
+            padding-left: 10px;
+            margin-top: 0;
+        }
+        .pros, .cons, .prevention {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        .pros li { color: #28a745; }
+        .cons li { color: #dc3545; }
+        .prevention li { color: #ffc107; }
+        li { margin-bottom: 8px; }
+        strong {
+            color: #495057;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #adb5bd;
+        }
+        .arrow {
+            font-size: 1em;
+            transition: transform 0.3s;
+        }
+        details[open] .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🤖 AI 工具資安互動指南</h1>
+            <p>專為零基礎新鮮人設計，點擊下方分類，一秒看懂資安風險！</p>
+        </header>
+
+        <details class="tool-category">
+            <summary>雲端全自動平台 (Make, Zapier) <span class="arrow">▶</span></summary>
+            <div class="details-content">
+                <h3>🏠 比喻：住在外面的「萬能管家」</h3>
+                <p><strong>說明：</strong>你把鑰匙和文件交給他，他去他的辦公室幫你處理好一切。超級方便，但文件不在你手上。</p>
+                <h3>👍 優點</h3>
+                <ul class="pros">
+                    <li>極致方便，幾分鐘就能上手。</li>
+                    <li>完全不需要寫程式。</li>
+                </ul>
+                <h3>😥 資安風險</h3>
+                <ul class="cons">
+                    <li>資料外洩：管家辦公室 (雲端伺服器) 可能被駭。</li>
+                    <li>資料被亂用：你的資料可能被拿去分析或訓練。</li>
+                    <li>設定錯誤：不小心給管家太多權限，把機密公開。</li>
+                </ul>
+                <h3>🛡️ 如何預防</h3>
+                <ul class="prevention">
+                    <li><strong>黃金法則：</strong>絕不處理高度敏感個資或公司核心機密！</li>
+                    <li>優先選擇付費版，通常有更好的隱私保障。</li>
+                    <li>只給予完成工作「最小必要」的權限。</li>
+                    <li>開啟兩步驟驗證 (2FA)。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="tool-category">
+            <summary>雲端大型語言模型 (ChatGPT, Claude) <span class="arrow">▶</span></summary>
+            <div class="details-content">
+                <h3>🏛️ 比喻：住在「公共圖書館」的超聰明顧問</h3>
+                <p><strong>說明：</strong>你可以問他任何事，但他聽到的、看到的東西，預設都會變成他知識的一部分。</p>
+                <h3>👍 優點</h3>
+                <ul class="pros">
+                    <li>強大的文字生成、摘要、分析能力。</li>
+                    <li>快速啟發創意，解決問題。</li>
+                </ul>
+                <h3>😥 資安風險</h3>
+                <ul class="cons">
+                    <li>對話被當成教材：你的提問預設會被拿去訓練模型。</li>
+                    <li>紀錄外洩：若服務商被駭，對話紀錄可能外洩。</li>
+                    <li>無心之過：不小心把客戶或個人機密資訊貼上去。</li>
+                </ul>
+                <h3>🛡️ 如何預防</h3>
+                <ul class="prevention">
+                    <li><strong>黃金法則：</strong>上傳前，務必手動「資料脫敏」(刪掉或替換姓名、電話、身分證號等)。</li>
+                    <li>到帳號設定中，找到並關閉「用我的資料來訓練模型」的選項。</li>
+                    <li>定期刪除歷史對話紀錄。</li>
+                    <li>公司用途請務必使用有簽訂隱私協議的 API 或企業版。</li>
+                </ul>
+            </div>
+        </details>
+        
+        <details class="tool-category">
+            <summary>自架設自動化工具 (n8n on Docker) <span class="arrow">▶</span></summary>
+            <div class="details-content">
+                <h3>🤵 比喻：住在「你自己家裡」的專屬管家</h3>
+                <p><strong>說明：</strong>他只為你工作，所有文件都在你家處理，最安全但也最需要你費心照顧。</p>
+                <h3>👍 優點</h3>
+                <ul class="pros">
+                    <li>最高等級的安全性，資料完全不外流。</li>
+                    <li>完全掌控所有流程與資料。</li>
+                </ul>
+                <h3>😥 資安風險</h3>
+                <ul class="cons">
+                    <li>技術門檻高：需要懂一點伺服器或網路知識。</li>
+                    <li>維護成本：需要自己記得更新軟體、處理問題。</li>
+                    <li>設定錯誤：自己沒設好密碼或防火牆，等於門戶大開。</li>
+                </ul>
+                <h3>🛡️ 如何預防</h3>
+                <ul class="prevention">
+                    <li><strong>黃金法則：</strong>這是最安全的選項，前提是你願意花時間學習。</li>
+                    <li>務必設定一個超級複雜的登入密碼。</li>
+                    <li>保持 n8n 軟體版本隨時在最新狀態。</li>
+                    <li>確保你的主機有基礎的防火牆。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details class="tool-category">
+            <summary>雲端自架設 (n8n on Zeabur) <span class="arrow">▶</span></summary>
+            <div class="details-content">
+                <h3>🏢 比喻：在「保全森嚴的大樓」租一間私人辦公室</h3>
+                <p><strong>說明：</strong>大樓本身很安全，你只要顧好自己辦公室的鑰匙就好。是安全與便利的絕佳平衡點。</p>
+                <h3>👍 優點</h3>
+                <ul class="pros">
+                    <li>兼顧高安全性與便利性。</li>
+                    <li>免去繁瑣的伺服器維護工作。</li>
+                </ul>
+                <h3>😥 資安風險</h3>
+                <ul class="cons">
+                    <li>設定風險：你自己設定的 n8n 帳號密碼如果太弱，還是會出事。</li>
+                    <li>平台依賴：安全依賴部署平台的可靠性。</li>
+                </ul>
+                <h3>🛡️ 如何預防</h3>
+                <ul class="prevention">
+                    <li><strong>黃金法則：</strong>對多數人來說，這是平衡安全與便利的最佳起點。</li>
+                    <li>為你的 n8n 登入介面設定一個超級複雜的密碼。</li>
+                    <li>善用平台提供的安全功能來管理密碼等機敏資訊。</li>
+                    <li>選擇信譽良好的部署平台 (如 Zeabur, Railway, Render)。</li>
+                </ul>
+            </div>
+        </details>
+
+        <footer>
+            <p>這是一份離線互動指南，您的任何操作都不會被記錄或上傳。</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
